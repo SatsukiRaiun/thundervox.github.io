@@ -2,6 +2,7 @@
 Blog for experimental purpose.
 
 2023年4月26日: OSDN より移行作業開始予定
+2026年2月16日: このリポジトリの更新は終了予定です。
 
 # TODO
  - Candy Apple の執筆再開
