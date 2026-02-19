@@ -55,11 +55,11 @@ $ include "seed7_05.s7i";
 
 ``'func'`` 構文は、 PASCAL の `begin` ... `end` および C の `{ ... }` に類似している。 ``'func'``の内部には、 [`"hello world"`](#tokens_String_literals) 文字列を有する `writeln` ステートメントがあり、 `writeln` ステートメントは、[`文字列`](#types_string)に続いて改行文字を書き込むために使用される。
 
-### 2.2 挨拶
+### 2.2 あいさつ
 
 以下のプログラムは、小さなダイアログを起動します。
 
-``` inden
+``` pascal
 $ include "seed7_05.s7i";
 
 const proc: main is func
@@ -74,29 +74,26 @@ const proc: main is func
 
 このプログラムを greeting.sd7 ファイルに保存し、コンソールで次のように起動します。
 
-``` indent
+``` bash
 s7 greeting
 ```
 
 次のようにお名前をお尋ねします。
 
-``` indent
+``` text
 What's your name?
 ```
 
-名前を入力してEnterを押すと、挨拶が表示されます。
+名前を入力して Enter を押すと、挨拶が表示されます。
 このプログラムは、変数を使用する`'name'` 入力した名前を保存します。
 変数を定義する必要があります。
 関数のすべての変数を定義および初期化する場所は、 `local` キーワードの後です。
 
-``` indent
+``` pascal
 var string: name is "";
 ```
 
-**FIXME:**
-
-これは[`文字列`](#types_string){.type}変わりやすい`'name'`この定義では、初期値も割り当てられます。[\"\"](#tokens_String_literals){.stri}へ`'name'`・値[\"\"](#tokens_String_literals){.stri}が空の文字列の場合(何も文字が含まれていない場合)
-Seed7では、変数を定義し、常に初期値を取得する必要があります。
+これは[`文字列`](#types_string)変数 'name' を定義します。この定義では、 'name'に初期値 [\" \"](#tokens_String_literals) も割り当てます。値 [\" \"](#tokens_String_literals) は空文字列 (文字を含まない文字列)です。 Seed7 では変数は必ず定義してから常に初期値が割り当てる必要があります。
 
 その `write` ステートメントは次のようになります。 `writeln` と同じですが、改行文字を書き込みません。
 その `readln` 文は、標準入力ファイルから行を読み込み、その行を指定された変数に代入します。
@@ -105,10 +102,10 @@ Seed7では、変数を定義し、常に初期値を取得する必要があり
 最後の `writeln` 文は演算子を含む `<&` と入力します。
 必要に応じて `<&` 演算子は値を[`文字列`](#types_string){.type}
 
-上記のグリーティング・プログラムには問題があります。
-誰かが名前の入力を拒否して\[Enter\]だけを押した場合、プログラムは次のように書き込みます。
+上記のあいさつプログラムには問題があります。
+誰かが名前の入力を拒否して Enter だけを押した場合、プログラムは次のように書き込みます。
 
-``` indent
+``` text
 Hi !
 ```
 
@@ -133,6 +130,7 @@ const proc: main is func
   end func;
 ```
 
+**FIXME:**
 ゼロまたはそれ以上になり得ます。[`elsif`]{.keywd}部品、および[`else`]{.keywd}パートはオプションです。
 見ての通り、文字列が等しいかどうかは[`=`]{.op_no_ul}の条件[if文](#stats_if-statement){.link}何をするか決めなければいけない
 偶然にも上の例の両方の条件が変数を使用する`名前`この特別なケースは [case 文](#stats_case-statement) 代わりに:
