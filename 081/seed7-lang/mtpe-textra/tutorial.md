@@ -38,34 +38,30 @@ hello world
 s7 -q hello
 ```
 
-プログラムの最初の行
+プログラムの最初の行には、
 
 ``` pascal
 $ include "seed7_05.s7i";
 ```
 
-**FIXME:**に、標準ライブラリの定義をすべて示します。
-他のライブラリとは対照的に、 seed7_05.s7i ライブラリには関数宣言だけでなく、ステートメントと演算子の宣言も含まれています。
-さらに、 seed7_05.s7i ライブラリは[`main`]{.func}機能をSeed7 プログラムのエントリーポイントとして使用します。
+標準ライブラリのすべての定義が含まれます。他のライブラリとは対照的に、 seed7_05.s7i ライブラリには関数宣言だけでなく、ステートメントと演算子の宣言も含まれています。さらに、 seed7_05.s7i ライブラリは、 `main` 関数を Seed7 プログラムのエントリポイントとして定義しています。
 
-上の例では [`main`]() は定数として宣言され [`proc`]() は[`main`]() 宣言[`main`]() そのタイプで[`proc`]() そこから手続きを作る。
-オブジェクトは[`main`]() を取得します。
+上の例では、`main`は定数として宣言されているため、 `proc` は`main`型となります。 `proc` 型で `main` を宣言すると、プロシージャが作成されます。`main`オブジェクトは、
 
-``` indent
+``` pascal
 $ include "seed7_05.s7i";
 ```
+値として構文を取り込みます。
 
-は値として構築します。
-その`'`[`機能`]`'`構成はに類似している[`begin`]{.keywd}[`終わり`]PASCALと`{.}`in
-C. Inside
-the`'`[`機能`]{.keywd}`'`は[`writeln`]{.func}ステートメントを[`"hello world"`](#tokens_String_literals){.stri}文字列。
-その[`writeln`]{.func}ステートメントは[`文字列`](#types_string){.type}その後に改行文字が続きます。
+``'func'`` 構文は、 PASCAL の `begin` ... `end` および C の `{ ... }` に類似している。 ``'func'``の内部には、 [`"hello world"`](#tokens_String_literals) 文字列を有する `writeln` ステートメントがあり、 `writeln` ステートメントは、[`文字列`](#types_string)に続いて改行文字を書き込むために使用される。
+
+**FIXME:** 
 
 ### 2.2 挨拶
 
 以下のプログラムは、小さなダイアログを起動します。
 
-``` indent
+``` inden
 $ include "seed7_05.s7i";
 
 const proc: main is func
